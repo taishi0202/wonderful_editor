@@ -7,10 +7,15 @@
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :bigint
+#
+# Indexes
+#
+#  index_articles_on_user_id  (user_id)
 #
 FactoryBot.define do
   factory :article do
-    title { "MyString" }
-    body { "MyText" }
+    title { Faker::Game.title }
+    user
   end
 end

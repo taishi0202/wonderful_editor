@@ -24,7 +24,7 @@ RSpec.describe Article, type: :model do
   end
 
   context "タイトルがない時" do
-    it "記事が作られない" do
+    it "エラーが出る" do
       article = build(:article, title: nil)
       expect(article).to be_invalid
       expect(article.errors.details[:title][0][:error]).to eq :blank

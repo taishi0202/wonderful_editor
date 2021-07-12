@@ -33,7 +33,7 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe User, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
@@ -44,8 +44,6 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
   end
-
-
 
   context "名前のみ入力している場合" do
     let(:user) { build(:user, email: nil, password: nil) }
